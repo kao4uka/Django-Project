@@ -27,3 +27,14 @@ def products_view(requests):
         }
 
         return render(requests, 'products/products.html', context=context)
+
+def product_detail_view(requests, id):
+    if requests.method == "GET":
+        product = Product.objects.get(id=id)
+
+        context = {
+            "product": product,
+            "reviews": product.reviews.all()
+        }
+
+        return render(requests, 'products/detail.html', context=context)

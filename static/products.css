@@ -1,0 +1,21 @@
+        .products {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .product_block {
+            transition: all 0.3s;
+            margin: 20px;
+        }
+
+        .product_block:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .product_image {
+            width: 200px;
+        }
