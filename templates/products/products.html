@@ -5,13 +5,13 @@
 {% endblock %}
 
 {% block content %}
-    <div class="products">
+    <div class="product">
         {% for product in products %}
             <div class="product_block">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                     {% if product.image %}
-                        <img class="product_image" src="/media/" alt="">
+                        <img class="product_image" src="{{ product.image }}" alt="">
                     {% else %}
                         <img class="product_image" src="{% static 'img.jpg' %}" alt="">
                     {% endif %}

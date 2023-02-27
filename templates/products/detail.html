@@ -31,6 +31,11 @@
             <h6>{{ product.modified_date }}</h6>
         </div>
         <h6 class="reviews_title">Reviews:</h6>
+        <form action="/products/{{ product.id }}/" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Add Review">
+        </form>
         <div class="reviews">
             {% for review in reviews %}
                 <div class="review_block">
