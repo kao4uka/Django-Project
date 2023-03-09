@@ -2,6 +2,11 @@ from django.shortcuts import render, redirect
 from users.form import RegisterForm, LoginForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.views.generic.edit import FormView
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+
+
 
 
 def register_view(request):
